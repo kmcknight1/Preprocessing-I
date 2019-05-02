@@ -134,6 +134,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background: black;
 }
 .container {
   display: flex;
@@ -149,6 +150,12 @@ body {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .container header {
+    height: 9em;
+    align-items: center;
+  }
+}
 .container header nav {
   width: 90%;
   display: flex;
@@ -156,14 +163,22 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .container header nav {
+    flex-flow: column nowrap;
+    margin-top: 1em;
+  }
+}
 .container header nav a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.3em;
   font-family: "Gugi", cursive;
   text-shadow: 2px 2px 3px grey;
   margin-bottom: 0.6em;
+  color: black;
+  opacity: 0.8;
 }
 .container .content {
   max-width: 880px;
@@ -175,19 +190,31 @@ body {
   justify-content: space-between;
   margin-top: 3em;
 }
+@media (max-width: 500px) {
+  .container .content .top-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 2em;
+  }
+}
 .container .content .top-content .intro {
   width: 48%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .container .content .top-content .intro {
+    width: 80%;
+  }
+}
 .container .content .top-content .intro h1 {
   margin-bottom: 9%;
-  color: black;
+  color: white;
   font-size: 2em;
   font-family: "Gugi", cursive;
   text-shadow: 3px 3px 4px grey;
 }
 .container .content .top-content .intro p {
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.4em;
@@ -197,21 +224,41 @@ body {
   width: 48%;
   flex-direction: row-reverse;
 }
+@media (max-width: 500px) {
+  .container .content .top-content .intro-img {
+    justify-content: center;
+    margin-top: 1em;
+  }
+}
 .container .content .top-content .intro-img img {
   object-fit: scale-down;
   border-radius: 50%;
+  box-shadow: 2px 2px 4px;
 }
 .container .content .middle-content {
   margin-top: 3em;
   display: flex;
   flex-flow: row nowrap;
 }
+@media (max-width: 500px) {
+  .container .content .middle-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .container .content .middle-content .skills {
   text-align: center;
   width: 30%;
 }
+@media (max-width: 500px) {
+  .container .content .middle-content .skills {
+    width: 80%;
+    justify-content: center;
+  }
+}
 .container .content .middle-content .skills h2 {
-  color: black;
+  color: white;
   font-size: 1.3em;
   font-family: "Gugi", cursive;
   text-shadow: 2px 2px 3px grey;
@@ -227,7 +274,7 @@ body {
 .container .content .middle-content .skills ul li {
   text-align: center;
   margin-bottom: 0.7em;
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.4em;
@@ -237,15 +284,24 @@ body {
   width: 65%;
   margin-left: 2.5em;
 }
+@media (max-width: 500px) {
+  .container .content .middle-content .work-history {
+    margin-top: 1.5em;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+}
 .container .content .middle-content .work-history h2 {
-  color: black;
+  color: white;
   font-size: 1.3em;
   font-family: "Gugi", cursive;
   text-shadow: 2px 2px 3px grey;
   margin-bottom: 0.6em;
 }
 .container .content .middle-content .work-history p {
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.4em;
@@ -258,7 +314,7 @@ body {
   width: 8em;
   font-family: "Gugi", cursive;
   font-size: 1.1em;
-  color: black;
+  color: white;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -267,7 +323,7 @@ body {
   text-shadow: 1px 1px 2px grey;
 }
 .container .content .middle-content .work-history a:hover {
-  background: #42b6f4;
+  background: #4baac8;
   box-shadow: inset 1px 1px 2px 1px;
   cursor: pointer;
 }
@@ -276,12 +332,24 @@ body {
   margin-bottom: 4em;
   display: flex;
 }
+@media (max-width: 500px) {
+  .container .content .bottom-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .container .content .bottom-content form {
   width: 48%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .container .content .bottom-content form {
+    width: 80%;
+  }
 }
 .container .content .bottom-content form .fields {
   display: flex;
@@ -300,7 +368,7 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px grey;
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.4em;
@@ -335,7 +403,7 @@ body {
   width: 8em;
   font-family: "Gugi", cursive;
   font-size: 1.1em;
-  color: black;
+  color: white;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -345,7 +413,7 @@ body {
   margin-top: 0.7em;
 }
 .container .content .bottom-content form .actions input:hover {
-  background: #42b6f4;
+  background: #4baac8;
   box-shadow: inset 1px 1px 2px 1px;
   cursor: pointer;
 }
@@ -372,6 +440,9 @@ body {
   border: 1px solid black;
   border-radius: 16px;
   box-shadow: 1px 1px 3px;
+  width: 3em;
+  height: 3em;
+  object-fit: scale-down;
 }
 .container .content footer {
   display: flex;
@@ -380,7 +451,7 @@ body {
   margin-bottom: 2em;
 }
 .container .content footer a {
-  color: black;
+  color: white;
   font-size: 1em;
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.4em;
