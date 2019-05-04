@@ -235,7 +235,7 @@ body {
 @media (max-width: 500px) {
   .container .content .top-content .intro-img {
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 10%;
   }
 }
 .container .content .top-content .intro-img img {
@@ -254,6 +254,7 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 18%;
   }
 }
 .container .content .middle-content .skills {
@@ -297,7 +298,7 @@ body {
 }
 @media (max-width: 500px) {
   .container .content .middle-content .work-history {
-    margin-top: 1.5em;
+    margin-top: 15%;
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -347,6 +348,11 @@ body {
   align-items: center;
   margin-bottom: 3%;
 }
+@media (max-width: 500px) {
+  .container .content .check-out {
+    width: 99%;
+  }
+}
 .container .content .check-out h1 {
   color: white;
   font-size: 1.3em;
@@ -354,6 +360,7 @@ body {
   text-shadow: 2px 2px grey;
   letter-spacing: 0.1em;
   margin-bottom: 0.6em;
+  text-align: center;
 }
 .container .content .bottom-content {
   margin-top: 0%;
@@ -463,6 +470,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .container .content .bottom-content .social-media {
+    width: 100%;
+    margin-top: 5%;
+  }
 }
 .container .content .bottom-content .social-media .links {
   display: flex;
