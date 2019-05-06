@@ -1,1 +1,516 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container header {
+  background: #89c6f4;
+  width: 100%;
+  height: 5em;
+  box-shadow: inset 2px 2px 4px 3px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .container header {
+    height: 9em;
+    align-items: center;
+  }
+}
+.container header nav {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-flow: column nowrap;
+    margin-top: 1em;
+  }
+}
+.container header nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px grey;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6em;
+  color: black;
+  opacity: 0.8;
+}
+.container header nav a:hover {
+  color: white;
+  text-shadow: 3px 3px 10px black;
+}
+.container .content {
+  max-width: 880px;
+}
+.container .content .top-content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 9%;
+}
+@media (max-width: 500px) {
+  .container .content .top-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 2em;
+  }
+}
+.container .content .top-content .intro {
+  width: 48%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container .content .top-content .intro {
+    width: 80%;
+  }
+}
+.container .content .top-content .intro h1 {
+  margin-bottom: 7%;
+  color: white;
+  font-size: 2em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px darkgrey;
+  letter-spacing: 0.1em;
+}
+.container .content .top-content .intro p {
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.4em;
+  letter-spacing: 0.7px;
+}
+.container .content .top-content .intro-img {
+  display: flex;
+  width: 48%;
+  flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  .container .content .top-content .intro-img {
+    justify-content: center;
+    margin-top: 10%;
+  }
+}
+.container .content .top-content .intro-img img {
+  object-fit: scale-down;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 5px #666666;
+}
+.container .content .middle-content {
+  margin-top: 15%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 13%;
+}
+@media (max-width: 500px) {
+  .container .content .middle-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18%;
+  }
+}
+.container .content .middle-content .skills {
+  text-align: center;
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .container .content .middle-content .skills {
+    width: 80%;
+    justify-content: center;
+  }
+}
+.container .content .middle-content .skills h2 {
+  color: white;
+  font-size: 1.3em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px grey;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6em;
+}
+.container .content .middle-content .skills ul {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-top: 0.7em;
+}
+.container .content .middle-content .skills ul li {
+  text-align: center;
+  margin-bottom: 0.9em;
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.4em;
+  letter-spacing: 0.7px;
+}
+.container .content .middle-content .work-history {
+  text-align: center;
+  width: 65%;
+  margin-left: 2.5em;
+}
+@media (max-width: 500px) {
+  .container .content .middle-content .work-history {
+    margin-top: 15%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+}
+.container .content .middle-content .work-history h2 {
+  color: white;
+  font-size: 1.3em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px grey;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6em;
+  display: inline-block;
+}
+.container .content .middle-content .work-history p {
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.4em;
+  letter-spacing: 0.7px;
+}
+.container .content .middle-content .work-history a {
+  margin-top: 1.5em;
+  background: #89c6f4;
+  display: inline-flex;
+  height: 40px;
+  width: 170px;
+  font-family: "Gugi", cursive;
+  font-size: 1.1em;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0px 0px 4px 1px grey;
+  text-shadow: 1px 1px 2px grey;
+}
+.container .content .middle-content .work-history a:hover {
+  background: #168de8;
+  box-shadow: inset 1px 1px 2px 1px;
+  cursor: pointer;
+}
+.container .content .check-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  .container .content .check-out {
+    width: 99%;
+  }
+}
+.container .content .check-out h1 {
+  color: white;
+  font-size: 1.3em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px grey;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+.container .content .bottom-content {
+  margin-top: 0%;
+  margin-bottom: 4em;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .container .content .bottom-content {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container .content .bottom-content form {
+  width: 48%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .container .content .bottom-content form {
+    width: 80%;
+  }
+}
+.container .content .bottom-content form .fields {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .bottom-content form .fields .field {
+  displa: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .bottom-content form .fields .field label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px grey;
+  color: white;
+  font-size: 1em;
+  font-family: "Gugi", cursive;
+  text-shadow: 2px 2px grey;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
+}
+.container .content .bottom-content form .fields .field input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 20em;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: 0.3em;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  text-align: center;
+}
+.container .content .bottom-content form .fields .field textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15em;
+  width: 20em;
+  box-shadow: 1px 1px 2px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+}
+.container .content .bottom-content form .actions input {
+  background: #89c6f4;
+  display: inline-flex;
+  height: 40px;
+  width: 200px;
+  font-family: "Gugi", cursive;
+  font-size: 1.1em;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0px 0px 4px 1px grey;
+  text-shadow: 1px 1px 2px grey;
+  margin-top: 0.7em;
+}
+.container .content .bottom-content form .actions input:hover {
+  background: #168de8;
+  box-shadow: inset 1px 1px 2px 1px;
+  cursor: pointer;
+}
+.container .content .bottom-content .social-media {
+  width: 48%;
+  margin-top: -5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .container .content .bottom-content .social-media {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+.container .content .bottom-content .social-media .links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 65%;
+  height: 35%;
+}
+.container .content .bottom-content .social-media .links a {
+  width: 4em;
+  height: 4em;
+  margin-top: 3.5em;
+}
+.container .content .bottom-content .social-media .links a img {
+  border: 1px solid black;
+  border-radius: 16px;
+  width: 4em;
+  height: 4em;
+  object-fit: scale-down;
+}
+.container .content .bottom-content .social-media .links a img:hover {
+  opacity: 0.7;
+}
+.container .content footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.container .content footer a {
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.4em;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  opacity: 0.8;
+}
